@@ -14,11 +14,20 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+/*************
+*   HOME
+*************/
+
 .home {
+  /* position: relative; */
   background-size: cover;
   background-image: url(/images/bg-home.jpg);
   height: 100vh;
-  /* width: 100vw; */
 }
 
 .home .header {
@@ -38,11 +47,13 @@ body {
 .home .header .nav ul li {
   display: flex;
   align-items: center;
-  margin: 0 10px;
+  justify-content: center;
+  /* margin: 0 10px; */
+  width: 150px;
 }
 
 .home .header .nav ul li a {
-  color: var(--color-primary-light);
+  color: white;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: bold;
@@ -58,3 +69,127 @@ body {
 .home .header .nav ul li .logo {
   margin: 0 30px;
 }
+
+/*****************
+*  HOME - BANNER
+******************/
+
+.home .banner {
+  display: flex;   
+  flex-direction: column;     
+  justify-content: center;
+  align-items: center; 
+  height: 65vh;
+  /* height: calc(100vh - 190px); */
+  color: white;
+
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 270px;
+  width: 770px;
+  margin-left: -385px;
+  margin-top: -75px;
+  color: white;
+  text-align: center; */
+}
+
+.home .banner span{
+  display: block;
+}
+
+.home .banner h1 {
+  font-size: 120px;
+}
+
+.home .banner .slogan1 {
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 14px;
+}
+
+.home .banner .slogan2 {
+  margin-bottom: 15px;
+}
+
+
+
+/***********
+*  ABOUT
+************/
+
+.about {
+  background-color: var(--color-primary);
+}
+
+.about .container {
+  display: flex;
+}
+
+.about .timing {
+  position: relative;
+  top: -50px; /* só funciona com o pposition: relative; */
+  width: 33%;
+  padding: 20px;
+  background-image: url(/images/brush-big.jpg);
+}
+
+.about .timing .overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.about .timing .icon-cut {
+  width: 50px;
+}
+
+.about .timing h3 {
+  color: var(--color-primary);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--color-primary);
+  width: fit-content; /* to fit the text and border-bottom */
+  margin: 0 auto 30px auto;
+  font-size: 30px;
+}
+
+.about .timing .text {
+  margin: 0;
+  /* margin: 10px 0; usado por causa do bullet */
+}
+
+/* 
+.about .timing .text:after {
+  content: “•”;
+  display: block;
+  font-size: 25px;
+  color: white;
+}
+
+.about .timing .text:last-of-type:after {
+  content: '|';
+}
+*/
+
+.about .timing .text h4 {
+  color: grey;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.about .timing span {
+  display: block;
+  color: white;
+  font-size: 15px;
+}
+
+.about .timing .text .character {
+  font-size: 25px;
+  margin: 10px;
+}
+
+.about .story {
+  width: 66%;
+}
+
