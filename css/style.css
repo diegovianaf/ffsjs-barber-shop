@@ -1,7 +1,9 @@
 :root {
   --color-primary: #917758;
-  --color-secondary: #3c2915;
   --color-primary-light: #f5eee6;
+  --color-secondary: #3c2915;
+  --color-secondary-light: #a38f78;
+  --color-tertiary: #191919;
 }
 
 * {
@@ -15,19 +17,21 @@ body {
 }
 
 .container {
-  max-width: 1170px;
+  width: 1170px;
   margin: 0 auto;
 }
 
-/*************
-*   HOME
-*************/
 
+
+/***********
+*   HOME   *
+***********/
 .home {
   /* position: relative; */
   background-size: cover;
   background-image: url(/images/bg-home.jpg);
   height: 100vh;
+  background-attachment: fixed;
 }
 
 .home .header {
@@ -70,10 +74,11 @@ body {
   margin: 0 30px;
 }
 
-/*****************
-*  HOME - BANNER
-******************/
 
+
+/********************
+*   HOME - BANNER   *
+********************/
 .home .banner {
   display: flex;   
   flex-direction: column;     
@@ -115,12 +120,12 @@ body {
 
 
 
-/***********
-*  ABOUT
+/************
+*   ABOUT   *
 ************/
-
 .about {
   background-color: var(--color-primary);
+  
 }
 
 .about .container {
@@ -129,7 +134,7 @@ body {
 
 .about .timing {
   position: relative;
-  top: -50px; /* só funciona com o pposition: relative; */
+  top: -50px; /* só funciona com o position: relative; */
   width: 33%;
   padding: 20px;
   background-image: url(/images/brush-big.jpg);
@@ -160,14 +165,14 @@ body {
 }
 
 /* 
-.about .timing .text:after {
+.about .timing .text::after {
   content: “•”;
   display: block;
   font-size: 25px;
   color: white;
 }
 
-.about .timing .text:last-of-type:after {
+.about .timing .text:last-of-type::after {
   content: '|';
 }
 */
@@ -178,18 +183,279 @@ body {
   font-size: 15px;
 }
 
+.about .timing .text .character {
+  font-size: 25px;
+  margin: 10px;
+}
+
 .about .timing span {
   display: block;
   color: white;
   font-size: 15px;
 }
 
-.about .timing .text .character {
-  font-size: 25px;
-  margin: 10px;
-}
 
 .about .story {
   width: 66%;
+  color: white;
+  margin-left: 7%;
+  margin-top: 100px;
 }
 
+.about .story h2 {
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.about .story h2::after {
+  display: block;
+  content: '';
+  width: 100px;
+  height: 3px;
+  background-color: var(--color-secondary-light);
+  margin: 20px 0;
+}
+
+.about .story .text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about .story .text p {
+  margin-bottom: 20px;
+  /* font-weight: 100;
+  font-size: 17px; */
+  word-spacing: 1px;
+  letter-spacing: .5px;
+}
+
+
+
+/***********
+* SERVICES
+************/
+.services {
+  padding: 100px 0;
+  text-align: center;
+  background-color: var(--color-primary-light);
+}
+
+.services h2 {
+  color: var(--color-secondary);
+  font-weight: 400;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.services .boxes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.services .box {
+  border: 3px solid var(--color-primary);
+  padding: 50px 40px;
+  margin: 30px;
+}
+
+.services .box h4 {
+  color: var(--color-secondary);
+  margin-top: 30px;
+}
+
+.services .box p {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+
+
+/******************
+*   APPOINTMENT   *
+******************/
+.appointment {
+  padding: 100px 0;
+  background-color: var(--color-primary);
+  height: 100vh;
+  background-image: url(/images/chair-ic.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 300px;
+}
+
+.appointment h2 {
+  color: var(--color-primary-light);
+  font-weight: 400;
+  font-size: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.appointment img {
+  margin: 0 auto;
+  display: block;
+}
+
+.appointment form {
+  margin-top: 80px;
+}
+
+.appointment .personal-data {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.appointment .input-wrapper {
+  width: 100%;
+  margin-right: 50px;
+}
+
+.appointment .input-wrapper:last-of-type {
+  margin-right: 0;
+}
+
+.appointment label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 2px;
+  color: var(--color-primary-light);
+}
+
+.appointment .personal-data input, 
+.appointment .personal-data select,
+.appointment textarea {
+  padding: 10px;
+  outline: none;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.appointment textarea {
+  height: 100px;
+}
+
+.appointment button {
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 15px 35px;
+  border: none;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+
+/**************
+*   GALLERY   *
+**************/
+.gallery {
+  padding: 100px 0;
+  background-color: var(--color-primary-light);
+}
+
+.gallery h2 {
+  color: var(--color-secondary);
+  font-weight: 400;
+  font-size: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.gallery img {
+  margin: 0 auto;
+  display: block;
+}
+
+.gallery .gallery-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 950px;
+  height: 80vh;
+  margin: 50px auto;
+}
+
+.gallery .gallery-wrapper div {
+  border: 10px solid var(--color-primary);
+  margin: 6px;
+  width: 32%;
+}
+
+.gallery .gallery-wrapper div img {
+  width: 100%;
+}
+
+
+
+/***************
+*   LOCATION   *
+***************/
+.location {
+  padding: 100px 0;
+  background-image: url(/images/bg-location.jpg);
+  background-size: cover;
+}
+
+.location .head {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-tertiary);
+  padding: 40px;
+  width: 100%;
+}
+
+.location .head .info {
+  display: flex;
+  align-items: center;
+}
+
+.location .head .info .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;  
+}
+
+.location .head .info .text span {
+  display: block;
+  font-size: 13px;
+}
+
+.location .head .info .text span:first-child {
+  color: silver;
+}
+
+.location .head .info .text span:last-child {
+  color: white;
+}
+
+/* .location .map {
+  width: 100%;
+} */
+
+.location .map iframe {
+  width: 100%;
+}
+
+
+
+/*************
+*   FOOTER   *
+*************/
+.footer {
+  background-color: var(--color-tertiary);
+  color: white;
+  padding: 40px;
+  text-align: center;
+  font-size: 12px;
+}
