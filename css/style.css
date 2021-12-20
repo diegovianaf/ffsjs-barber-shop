@@ -372,12 +372,12 @@ body {
 }
 
 .gallery .gallery-wrapper {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 950px;
-  height: 80vh;
-  margin: 50px auto;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+width: 900px;
+height: 100vh;
+margin: 50px auto auto;
 }
 
 .gallery .gallery-wrapper div {
