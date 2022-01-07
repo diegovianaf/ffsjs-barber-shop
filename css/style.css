@@ -29,7 +29,7 @@ body {
 .home {
   /* position: relative; */
   background-size: cover;
-  background-image: url(/images/bg-home.jpg);
+  background-image: url(../images/bg-home.jpg);
   height: 100vh;
   background-attachment: fixed;
 }
@@ -137,7 +137,7 @@ body {
   top: -50px; /* só funciona com o position: relative; */
   width: 33%;
   padding: 20px;
-  background-image: url(/images/brush-big.jpg);
+  background-image: url(../images/brush-big.jpg);
 }
 
 .about .timing .overlay {
@@ -279,7 +279,7 @@ body {
   padding: 100px 0;
   background-color: var(--color-primary);
   height: 100vh;
-  background-image: url(/images/chair-ic.png);
+  background-image: url(../images/chair-ic.png);
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 300px;
@@ -397,7 +397,7 @@ margin: 50px auto auto;
 ***************/
 .location {
   padding: 100px 0;
-  background-image: url(/images/bg-location.jpg);
+  background-image: url(../images/bg-location.jpg);
   background-size: cover;
 }
 
